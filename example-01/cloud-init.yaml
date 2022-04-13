@@ -1,0 +1,11 @@
+#cloud-config
+users:
+  - name: demo
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ecdsa-sha2-nistp521 AAAAE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAHXkjYagaRFTCO4VnfsvNX/5Mq7V09eOp9lYqqQJctnNz/mbIRhxyn9K3nhXjFlZtvDC0yubjXPgihV5J3xUdx/hQAIyczmev0Woq17X0la8iXgM5Kxr792hpNbuhlVM9tpsGwEiOqiSl/lPI90SPpGHRw2aqqkC4bAX9r/DTUpOrQmcw== max@ThinkPad
+runcmd:
+  - touch /tmp/demo.txt
+
